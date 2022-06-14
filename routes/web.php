@@ -32,6 +32,12 @@ $router->post('/jadwals/create', 'jadwalcontroller@store');
 $router->put('/jadwals/update/{id}', 'jadwalcontroller@update');
 $router->delete('/jadwals/delete/{id}', 'jadwalcontroller@destroy');
 
+$router->get('/Transportasis', 'TransportasiController@index');
+$router->get('/Transportasis/{id}', 'TransportasiController@show');
+$router->post('/Transportasis/create', 'TransportasiController@store');
+$router->put('/Transportasis/update/{id}', 'TransportasiController@update');
+$router->delete('/Transportasis/delete/{id}', 'TransportasiController@destroy');
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
