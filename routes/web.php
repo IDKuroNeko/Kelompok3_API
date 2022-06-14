@@ -26,6 +26,12 @@ $router->post('/stasiuns/create', 'StasiunController@store');
 $router->post('/stasiuns/update/{id}', 'StasiunController@update');
 $router->delete('/stasiuns/delete/{id}', 'StasiunController@destroy');
 
+$router->get('/jadwals', 'jadwalcontroller@index');
+$router->get('/jadwals/{id}', 'jadwalcontroller@show');
+$router->post('/jadwals/create', 'jadwalcontroller@store');
+$router->put('/jadwals/update/{id}', 'jadwalcontroller@update');
+$router->delete('/jadwals/delete/{id}', 'jadwalcontroller@destroy');
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
